@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="/">Home</a></h1>
+        <h1><a href="/navigation/about/">About</a></h1>
+        <h1><a href="/navigation/contact/">Contact</a></h1>
+    </header>
+    <h1>This is About page</h1>
+
+    <h3>Name: {{name}}</h3>
+    <h3>Age: {{age}}</h3>
+    <h3>Address: {{address}}</h3>
+    <h3>GPA: {{gpa}}</h3>
+
+
+    <!-- Condition -->
+    {% if gpa == 5 %}
+        <h4>You got A+ grade</h4>
+    {% elif gpa >= 4 and gpa < 5 %}
+        <h4>You got A grade</h4>
+    {% elif gpa >= 3.50 and gpa < 4 %}
+        <h4>You got A- grade</h4>
+    {% elif gpa >= 3 and gpa < 3.50 %}
+        <h4>You got B grade</h4>
+    {% else %}
+        <h4>You got C grade</h4>
+    {% endif %}
+
+
+    <!-- For loop -->
+    {% for i in courses %}
+        <span>{{i}}, </span>
+    {% endfor %}
+
+
+    <p>{{list}}</p>
+    <h2>{{list | join:'_'}}</h2>
+    <h2>{{ date | date:"D d M Y" }}</h2>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{{block.super}}
+<div class="container">
+    <h1>This is Home page</h1>
+    <div class="d-flex flex-wrap">
+        <img src="{% static 'car_1.jpg' %}" alt="Car" width="500"><br>
+        <img src="{% static 'car_2.jpg' %}" alt="Car" width="500"><br>
+        <img src="{% static 'car_3.jpg' %}" alt="Car" width="500"><br>
+        <img src="{% static 'car_4.jpg' %}" alt="Car" width="500"><br>
+    </div>
+</div>
+{% endblock %}

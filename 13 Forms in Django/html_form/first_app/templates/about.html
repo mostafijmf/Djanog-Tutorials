@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{{block.super}}
+<div class="container">
+    <h1>This is About page</h1>
+    <h2>Name: {{name}}</h2>
+    <h2>Email: {{email}}</h2>
+    <h2>Select: {{select}}</h2>
+</div>
+{% endblock %}
